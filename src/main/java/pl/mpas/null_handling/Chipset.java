@@ -5,9 +5,9 @@ public class Chipset {
     private String vendorName;
 
 
-    public static String getVendorName() {
-        return vendorName;
-    }
+//    public static String getVendorName() {
+//        return vendorName;
+//    }
 
     public Chipset(String vendorName) {
         this.vendorName = vendorName;

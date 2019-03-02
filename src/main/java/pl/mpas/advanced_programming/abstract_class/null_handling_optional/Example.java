@@ -18,14 +18,14 @@ public class Example {
 
     }
 
-    public static String getVendorNameJava8Way(Computer computer) {
-
-       return Optional.ofNullable(computer)
-                .map(Computer::getGraphicCard)
-                .map(GraphicCard::getChipset)
-                .orElseGet(() -> "brak");
-
-    }
+//    public static String getVendorNameJava8Way(Computer computer) {
+//
+//       return Optional.ofNullable(computer)
+//                .map(Computer::getGraphicCard)
+//                .map(GraphicCard::getChipset)
+//                .orElseGet(() -> "brak");
+//
+//    }
 
 
     }
