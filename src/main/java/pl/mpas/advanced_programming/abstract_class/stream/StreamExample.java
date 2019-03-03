@@ -62,18 +62,23 @@ public class StreamExample {
                 .collect(Collectors.toList());
     }
 
+    public static List<String> getIngredientsNamesParallel(List<Order> orders){
+                List<String> result = new ArrayList<>();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return    orders.parallelStream()
+                .flatMap(order -> order.getMyItems().stream())
+                .flatMap(item -> item.getIngredientsList().stream())
+                .map(Ingredients::getName)
+                .distinct()
+                .reduce(result,
+                        ((strings, s) -> {
+                            strings.add(s);
+                            System.out.println("aaa");
+                            System.out.println(strings);
+                            return strings;
+                        }), ((strings, strings2) -> {
+                            strings.addAll(strings2);
+                            return strings;}));
+        
+    }
 }

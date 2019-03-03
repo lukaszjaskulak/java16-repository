@@ -3,6 +3,7 @@ package pl.mpas.advanced_programming.abstract_class;
 public class Cat extends Animal {
 
 
+
     public Cat(String name) {
         super(name);
     }
@@ -13,7 +14,15 @@ public class Cat extends Animal {
     }
 
     @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
     public void play() {
 
     }
+
 }

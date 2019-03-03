@@ -6,7 +6,7 @@ import java.util.Objects;
 public abstract class Animal {
 
     private static final int NAME_MIN_LEN = 1;
-    private String name;
+    protected String name;
 
     public Animal(String name) {
        this.name = Objects.requireNonNull(name, "Puste imie");
@@ -18,4 +18,10 @@ public abstract class Animal {
     public abstract void eat ();
     public abstract void play();
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
