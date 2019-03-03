@@ -1,9 +1,10 @@
 package pl.mpas.advanced_programming.abstract_class.stream;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StreamExample {
@@ -27,12 +28,18 @@ public class StreamExample {
                 new Item("Chleb razowy", BigDecimal.valueOf(2.50),
                         Arrays.asList(new Ingredients("Woda razowa"), new Ingredients("Mąka razowa"), new Ingredients("Zakwas razowy"))));
 
-
+        List<Order> orderList = new ArrayList<>();
+        orderList.add(saturdayShopping);
         Order sundayShopping = new Order(sundayItems);
+        orderList.add(sundayShopping);
+
+
 
         getIngredientsNames(Arrays.asList(saturdayShopping, sundayShopping));
 
 
+
+       getPriceForShopping(Arrays.asList(saturdayShopping, sundayShopping));
     }
 
 
@@ -60,6 +67,13 @@ public class StreamExample {
 
 
 
-    }
 
 
+
+
+
+
+
+
+
+}
