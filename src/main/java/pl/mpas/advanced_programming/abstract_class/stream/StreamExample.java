@@ -79,6 +79,5 @@ public class StreamExample {
                         }), ((strings, strings2) -> {
                             strings.addAll(strings2);
                             return strings;}));
-        
     }
 }
